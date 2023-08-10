@@ -1,0 +1,20 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemalocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    
+    <persistence-unit name="persistence-unit-mysql" transaction-type="RESOURCE-LOCAL">
+    	<properties>
+    		<property name="javax.persistance.jdbc.driver" value="com.mysql.jdbc.Driver"></property>
+    		<property name="javax.persistance.jdbc.url" value="jdbc:mysql://localhost:3306/jpa"></property>
+    		<property name="javax.persistance.jdbc.user" value="root"></property>
+    		<property name="javax.persistance.jdbc.password" value="12345"></property>
+    		
+    		
+    		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"></property>
+    		<property name="hibernate.hbm2ddl.auto" value="create-drop" ></property>
+    		<property name="current_session_context_class" value="thread" ></property>
+    		<property name="hibernate.show_sql" value="true"></property>
+    		<property name="hibernate.format_sql" value="true"></property>
+    	</properties>
+    
+	</persistence-unit>
+	
+</persistence>
